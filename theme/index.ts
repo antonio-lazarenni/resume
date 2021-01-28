@@ -6,14 +6,14 @@ export default {
         text: '#0b0a07',
         background: '#fc7753',
         primary: '#439B7F',
-        secondary: '#fc7753',
+        secondary: '#203A3B',
         tertiary: '#3B5657',
         quaternary: '#3B5657',
         modes: {
             dark: {
                 text: '#fff',
                 background: '#203A3B',
-                primary: '#C8B86D',
+                primary: '#F9C359',
                 secondary: '#fc7753',
                 tertiary: '#F9C359',
                 quaternary: '#fc7753'
@@ -83,8 +83,8 @@ export default {
         },
         primary: {
             variant: 'buttons.default',
-            color: 'text',
-            bg: 'primary'
+            color: 'primary',
+            bg: 'secondary'
         },
         secondary: {
             variant: 'buttons.default',
