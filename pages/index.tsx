@@ -2,7 +2,6 @@ import Head from 'next/head'
 import { Container } from 'theme-ui';
 
 import { getAuthorById, getPosts } from '../utils/graphcms'
-import markdownToHtml from '../utils/markdownToHtml'
 
 import Person from '../components/Person'
 import Experience from '../components/Experience'
