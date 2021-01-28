@@ -1,4 +1,4 @@
-async function fetchAPI(query, { variables, preview } = {}) {
+async function fetchAPI(query: string, { variables, preview } = {variables: undefined, preview: undefined}) {
   const res = await fetch(process.env.GRAPHCMS_PROJECT_API, {
     method: 'POST',
     headers: {
