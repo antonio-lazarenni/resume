@@ -78,9 +78,9 @@ export default function Home({ author }): JSX.Element {
                         </Link>
                     </Flex>
                 </Section>
-                <Section>
+                {/* <Section>
                     <SectionTitle>About this page</SectionTitle>
-                </Section>
+                </Section> */}
             </Container>
             <footer></footer>
         </>
