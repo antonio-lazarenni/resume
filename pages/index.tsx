@@ -18,7 +18,6 @@ export default function Home({ author, posts }) {
       <Container sx={{
         display: 'flex',
         justifyContent: 'flex-end',
-        gap: 5,
         px: [3, 3, 0],
         py: [3, 3, 3]
       }}>
@@ -28,7 +27,10 @@ export default function Home({ author, posts }) {
       <Container as="main" sx={{
         display: 'flex',
         flexDirection: 'column',
-        gap: 5,
+        // gap: 5, // Enable it in the future
+        '& > *': {
+          my: 5,
+        },
         px: [3, 3, 0]
       }}>
         <Section>
@@ -37,7 +39,10 @@ export default function Home({ author, posts }) {
         <Section sx={{
             display: 'flex',
             flexDirection: 'column',
-            gap: 5,
+            // gap: 5, // Enable it in the future
+            '& > *': {
+              my: [5, 5],
+            },
         }}>
           {posts.map((post) => <Experience key={post.slug} {...post} />)}
         </Section>
