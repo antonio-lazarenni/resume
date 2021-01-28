@@ -54,7 +54,7 @@ export async function getPosts() {
   const data = await fetchAPI(
     `
     query Posts {
-      posts {
+      posts(orderBy: createdAt_DESC) {
         company
         title
         updatedAt

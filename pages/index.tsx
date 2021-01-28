@@ -34,7 +34,7 @@ export default function Home({ author, posts }) {
         </Section>
         <Section sx={{
             display: 'flex',
-            flexDirection: 'column-reverse',
+            flexDirection: 'column',
             my: 5,
         }}>
           {posts.map((post) => <Experience key={post.slug} {...post} />)}
