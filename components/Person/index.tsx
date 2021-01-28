@@ -21,7 +21,8 @@ const Person: FC<PersonProps> = ({ title, name, biography, picture }) => {
                 }}>
                 <Flex
                     sx={{
-                        boxShadow: (theme) => `1rem 1rem ${theme.colors.text}`
+                        boxShadow: (theme) => `1rem 1rem ${theme.colors.text}`,
+                        bg: 'secondary'
                     }}>
                     <Image src={picture.url} alt="Picture of the author" width={300} height={300} />
                 </Flex>
