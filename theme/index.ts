@@ -99,7 +99,8 @@ export default {
             fontWeight: 'body',
             textRendering: 'optimizelegibility',
             fontSmoothing: 'antialiased',
-            bg: 'background'
+            bg: 'background',
+            transition: 'background-color 0.5s ease'
         },
         h1: {
             variant: 'textStyles.display'
