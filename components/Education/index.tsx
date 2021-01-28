@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Box, Flex, Link, Text } from 'theme-ui';
+import { Box, Flex, Text } from 'theme-ui';
 
 export interface EducationProps {
     title: string;

@@ -7,16 +7,16 @@ export default {
         background: '#fc7753',
         primary: '#439B7F',
         secondary: '#fc7753',
-        tertiary: '#F9C359',
-        quaternary: '#C8B86D',
+        tertiary: '#3B5657',
+        quaternary: '#3B5657',
         modes: {
             dark: {
                 text: '#fff',
-                background: '#3B5657',
+                background: '#203A3B',
                 primary: '#C8B86D',
                 secondary: '#fc7753',
                 tertiary: '#F9C359',
-                quaternary: '#ff4444'
+                quaternary: '#fc7753'
             }
         }
     },

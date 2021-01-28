@@ -5,9 +5,9 @@ const SectionTitle: FC = ({ children }) => {
     return (
         <Text
             sx={{
-                boxShadow: (theme) => `0 0 0 1rem ${theme.colors.tertiary}`,
+                boxShadow: (theme) => `0 0 0 1rem ${theme.colors.text}`,
                 textAlign: 'center',
-                color: 'tertiary',
+                color: 'text',
                 py: 1,
                 my: 3
             }}
