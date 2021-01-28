@@ -1,26 +1,12 @@
 import { FC } from 'react';
 import { Box, Flex, Link, Text } from 'theme-ui';
 
-interface Content {
-    html: string;
-}
-
-interface ExperienceProps {
-    company: string;
+export interface EducationProps {
     title: string;
-    tags: string[];
-    stage: string;
-    slug: string;
+    institutionName: string;
     period: [string, string];
     location: string;
-    link: string;
     id: string;
-    excerpt: string;
-    content: Content;
-    date: Date;
-    publishedAt: Date;
-    updatedAt: Date;
-    createdAt: Date;
 }
 
 function beautifyDate(dateString: string): string {
@@ -28,15 +14,7 @@ function beautifyDate(dateString: string): string {
     return date.toLocaleDateString('en', { month: 'long', year: 'numeric' });
 }
 
-const Experience: FC<ExperienceProps> = ({
-    company,
-    title,
-    tags,
-    period,
-    location,
-    link,
-    content
-}) => {
+const Education: FC<EducationProps> = ({ title, institutionName, period, location }) => {
     return (
         <Flex
             sx={{
@@ -55,31 +33,9 @@ const Experience: FC<ExperienceProps> = ({
                     {title}
                 </Text>
                 <Text as="strong" variant="textStyles.strong">
-                    @{company}
+                    @{institutionName}
                 </Text>
-                <Link href={`//${link}`} target="_blank" rel="noopener">
-                    <Text as="strong" variant="textStyles.strong">
-                        {link}
-                    </Text>
-                </Link>
             </Flex>
-            {tags && (
-                <Flex
-                    sx={{
-                        my: 2,
-                        '& > *:not(:last-child)': {
-                            marginRight: [3, 3]
-                        },
-                        flexWrap: 'wrap'
-                    }}>
-                    {tags.map((tag) => (
-                        <Text key={tag} variant="textStyles.attention">
-                            {tag}
-                        </Text>
-                    ))}
-                </Flex>
-            )}
-            <Box dangerouslySetInnerHTML={{ __html: content.html }} />
             <Box
                 sx={{
                     my: 2
@@ -97,4 +53,4 @@ const Experience: FC<ExperienceProps> = ({
     );
 };
 
-export default Experience;
+export default Education;

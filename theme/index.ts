@@ -1,4 +1,3 @@
-
 export default {
     useCustomProperties: true,
     useColorSchemeMediaQuery: true,
@@ -17,29 +16,17 @@ export default {
                 primary: '#C8B86D',
                 secondary: '#fc7753',
                 tertiary: '#F9C359',
-                quaternary: '#ff4444',
-            },
-        },
+                quaternary: '#ff4444'
+            }
+        }
     },
-    breakpoints: [
-        '40em', '56em', '64em',
-    ],
+    breakpoints: ['40em', '56em', '64em'],
     fonts: {
-        body: "proxima-nova, sans-serif",
-        heading: "proxima-nova, sans-serif",
-        monospace: "proxima-nova, sans-serif"
+        body: 'proxima-nova, sans-serif',
+        heading: 'proxima-nova, sans-serif',
+        monospace: 'proxima-nova, sans-serif'
     },
-    fontSizes: [
-        12,
-        14,
-        16,
-        20,
-        24,
-        32,
-        48,
-        64,
-        72
-    ],
+    fontSizes: [12, 14, 16, 20, 24, 32, 48, 64, 72],
     fontWeights: {
         body: 400,
         heading: 700,
@@ -51,48 +38,39 @@ export default {
     },
     textStyles: {
         heading: {
-            fontFamily: "heading",
-            fontWeight: "heading",
-            lineHeight: "heading"
+            fontFamily: 'heading',
+            fontWeight: 'heading',
+            lineHeight: 'heading'
         },
         display: {
-            variant: "textStyles.heading",
-            fontSize: [
-                5,
-                6
-            ],
-            fontWeight: "display",
-            letterSpacing: "-0.03em",
+            variant: 'textStyles.heading',
+            fontSize: [5, 6],
+            fontWeight: 'display',
+            letterSpacing: '-0.03em',
             mt: 3
         },
         strong: {
-            variant: "textStyles.heading",
-            fontSize: [
-                3,
-                4
-            ],
-            fontWeight: "100",
-            letterSpacing: "-0.03em",
+            variant: 'textStyles.heading',
+            fontSize: [3, 4],
+            fontWeight: '100',
+            letterSpacing: '-0.03em'
         },
         attention: {
-            variant: "textStyles.heading",
-            fontSize: [
-                4,
-                5
-            ],
-            fontWeight: "display",
-            letterSpacing: "-0.03em",
+            variant: 'textStyles.heading',
+            fontSize: [4, 5],
+            fontWeight: 'display',
+            letterSpacing: '-0.03em'
         }
     },
     layout: {
         container: {
             // borderColor: 'tertiary',
             // borderStyle: 'solid',
-        },
+        }
     },
     radii: [0, 2, 4, 8, 16, 32, 48],
     sizes: {
-        container: 780,
+        container: 780
     },
     buttons: {
         default: {
@@ -100,121 +78,121 @@ export default {
             ':focus': {
                 outlineStyle: 'double',
                 outlineWidth: 'thick',
-                outlineColor: 'text',
+                outlineColor: 'text'
             }
         },
         primary: {
             variant: 'buttons.default',
             color: 'text',
-            bg: 'primary',
+            bg: 'primary'
         },
         secondary: {
             variant: 'buttons.default',
             color: 'text',
-            bg: 'secondary',
-        },
+            bg: 'secondary'
+        }
     },
     styles: {
         root: {
-            fontFamily: "body",
-            lineHeight: "body",
-            fontWeight: "body",
+            fontFamily: 'body',
+            lineHeight: 'body',
+            fontWeight: 'body',
             textRendering: 'optimizelegibility',
             fontSmoothing: 'antialiased',
-            bg: 'background',
+            bg: 'background'
         },
         h1: {
-            variant: "textStyles.display"
+            variant: 'textStyles.display'
         },
         h2: {
-            variant: "textStyles.heading",
+            variant: 'textStyles.heading',
             fontSize: 5
         },
         h3: {
-            variant: "textStyles.heading",
+            variant: 'textStyles.heading',
             fontSize: 4
         },
         h4: {
-            variant: "textStyles.heading",
+            variant: 'textStyles.heading',
             fontSize: 3
         },
         h5: {
-            variant: "textStyles.heading",
+            variant: 'textStyles.heading',
             fontSize: 2
         },
         h6: {
-            variant: "textStyles.heading",
+            variant: 'textStyles.heading',
             fontSize: 1
         },
         p: {
             fontSize: 2
         },
         a: {
-            color: "text",
-            fontFamily: "body",
-            lineHeight: "body",
-            fontWeight: "body",
+            color: 'text',
+            fontFamily: 'body',
+            lineHeight: 'body',
+            fontWeight: 'body',
             '&:hover': {
-                color: "quaternary"
+                color: 'quaternary'
             }
         },
         pre: {
-            fontFamily: "monospace",
+            fontFamily: 'monospace',
             fontSize: 1,
             p: 3,
-            color: "text",
-            bg: "muted",
-            borderColor: "text",
-            borderStyle: "solid",
+            color: 'text',
+            bg: 'muted',
+            borderColor: 'text',
+            borderStyle: 'solid',
             borderTopWidth: 0,
             borderLeftWidth: 0,
             borderRightWidth: 8,
             borderBottomWidth: 8,
-            overflow: "auto",
+            overflow: 'auto',
             code: {
-                color: "inherit"
+                color: 'inherit'
             }
         },
         code: {
-            fontFamily: "monospace",
+            fontFamily: 'monospace',
             fontSize: 1
         },
         inlineCode: {
-            fontFamily: "monospace",
-            color: "secondary",
-            bg: "muted",
+            fontFamily: 'monospace',
+            color: 'secondary',
+            bg: 'muted',
             px: 2
         },
         ul: {
-            listStyleType: "square"
+            listStyleType: 'square'
         },
         table: {
-            width: "100%",
+            width: '100%',
             my: 4,
-            borderCollapse: "separate",
+            borderCollapse: 'separate',
             borderSpacing: 0,
-            "th,td": {
-                textAlign: "left",
-                py: "4px",
-                pr: "4px",
+            'th,td': {
+                textAlign: 'left',
+                py: '4px',
+                pr: '4px',
                 pl: 0,
-                borderColor: "text",
-                borderBottomStyle: "solid"
+                borderColor: 'text',
+                borderBottomStyle: 'solid'
             }
         },
         th: {
-            backgroundColor: "muted",
-            verticalAlign: "bottom",
+            backgroundColor: 'muted',
+            verticalAlign: 'bottom',
             borderBottomWidth: 8
         },
         td: {
-            verticalAlign: "top",
+            verticalAlign: 'top',
             borderBottomWidth: 4
         },
         hr: {
             border: 0,
-            borderBottom: "8px solid",
-            borderColor: "text"
-        },
-    },
-}
+            borderBottom: '8px solid',
+            borderColor: 'text'
+        }
+    }
+};

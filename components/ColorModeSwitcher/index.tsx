@@ -1,16 +1,16 @@
-import React from 'react'
-import { useColorMode, Button } from 'theme-ui'
+import React, { FC } from 'react';
+import { Button, useColorMode } from 'theme-ui';
 
-const ColorModeSwitcher = (props) => {
-  const [colorMode, setColorMode] = useColorMode()
-  return (
-      <Button
-        onClick={e => {
-          setColorMode(colorMode === 'default' ? 'dark' : 'default')
-        }}>
-        Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
-      </Button>
-  )
-}
+const ColorModeSwitcher: FC = () => {
+    const [colorMode, setColorMode] = useColorMode();
+    return (
+        <Button
+            onClick={() => {
+                setColorMode(colorMode === 'default' ? 'dark' : 'default');
+            }}>
+            Toggle {colorMode === 'default' ? 'Dark' : 'Light'}
+        </Button>
+    );
+};
 
 export default ColorModeSwitcher;
