@@ -28,21 +28,18 @@ export default function Home({ author, posts }) {
         display: 'flex',
         flexDirection: 'column',
         // gap: 5, // Enable it in the future
-        '& > *': {
-          my: 5,
-        },
         px: [3, 3, 0]
       }}>
-        <Section>
+        <Section sx={{
+          my: 5,
+        }}>
           <Person {...author} />
         </Section>
         <Section sx={{
             display: 'flex',
-            flexDirection: 'column',
+            flexDirection: 'column-reverse',
+            my: 5,
             // gap: 5, // Enable it in the future
-            '& > *': {
-              my: [5, 5],
-            },
         }}>
           {posts.map((post) => <Experience key={post.slug} {...post} />)}
         </Section>

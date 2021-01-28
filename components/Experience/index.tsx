@@ -48,12 +48,11 @@ const Experience: FC<ExperienceProps> = ({
         <Flex sx={{
             flexDirection: 'column',
             // gap: 2,
-            '& > *': {
-                my: 2,
-            },
+            my: [5, 5],
         }}>
         <Flex sx={{
             // gap: '1rem',
+            my: 2,
             '& > *:not(:last-child)': {
                 marginRight: [0, 3],
             },
@@ -69,6 +68,7 @@ const Experience: FC<ExperienceProps> = ({
         </Flex>
         {tags && <Flex sx={{
             // gap: '.5rem',
+            my: 2,
             '& > *:not(:last-child)': {
                 marginRight: [3, 3],
             },
@@ -77,7 +77,9 @@ const Experience: FC<ExperienceProps> = ({
             {tags.map((tag) => <Text key={tag} variant="textStyles.attention">{tag}</Text>)}
         </Flex>}
         <Box dangerouslySetInnerHTML={{ __html: content.html }} />
-        <Box>
+        <Box sx={{
+            my: 2,
+        }}>
             <Box>
                 <Text>{location}</Text>
             </Box>
