@@ -5,18 +5,18 @@ export default {
     initialColorModeName: 'light',
     colors: {
         text: '#0b0a07',
-        background: '#fff',
-        primary: '#3f51b5',
+        background: '#fc7753',
+        primary: '#439B7F',
         secondary: '#fc7753',
-        tertiary: '#f3b61f',
-        quaternary: '#ff4444',
+        tertiary: '#F9C359',
+        quaternary: '#C8B86D',
         modes: {
             dark: {
                 text: '#fff',
-                background: '#0b0a07',
-                primary: '#3f51b5',
+                background: '#3B5657',
+                primary: '#C8B86D',
                 secondary: '#fc7753',
-                tertiary: '#f3b61f',
+                tertiary: '#F9C359',
                 quaternary: '#ff4444',
             },
         },
@@ -121,7 +121,7 @@ export default {
             fontWeight: "body",
             textRendering: 'optimizelegibility',
             fontSmoothing: 'antialiased',
-            bg: 'secondary',
+            bg: 'background',
         },
         h1: {
             variant: "textStyles.display"

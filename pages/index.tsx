@@ -7,6 +7,7 @@ import markdownToHtml from '../utils/markdownToHtml'
 import Person from '../components/Person'
 import Experience from '../components/Experience'
 import Section from '../components/Section'
+import ColorModeSwitcher from '../components/ColorModeSwitcher'
 
 export default function Home({ author, posts }) {
   return (
@@ -14,7 +15,17 @@ export default function Home({ author, posts }) {
       <Head>
           <title>{`${author.name}`}</title>
       </Head>
-      <header></header>
+      <header>
+      <Container sx={{
+        display: 'flex',
+        justifyContent: 'flex-end',
+        gap: 5,
+        px: [3, 3, 0],
+        py: [3, 3, 3]
+      }}>
+        <ColorModeSwitcher />
+        </Container>
+      </header>
       <Container as="main" sx={{
         display: 'flex',
         flexDirection: 'column',
@@ -29,7 +40,7 @@ export default function Home({ author, posts }) {
             flexDirection: 'column',
             gap: 5,
         }}>
-          {posts.map((post) => <Experience {...post} />)}
+          {posts.map((post) => <Experience key={post.slug} {...post} />)}
         </Section>
         </Container>
       <footer></footer>

@@ -65,7 +65,7 @@ const Experience: FC<ExperienceProps> = ({
             gap: '.5rem',
             flexWrap: 'wrap',
         }}>
-            {tags.map((tags) => <Text variant="textStyles.attention">{tags}</Text>)}
+            {tags.map((tag) => <Text key={tag} variant="textStyles.attention">{tag}</Text>)}
         </Flex>}
         <Box dangerouslySetInnerHTML={{ __html: content.html }} />
         <Box>
