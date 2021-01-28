@@ -1,18 +1,10 @@
 import { FC } from 'react';
 import { Box, Flex, Text } from 'theme-ui';
 
-export interface EducationProps {
-    title: string;
-    institutionName: string;
-    period: [string, string];
-    location: string;
-    id: string;
-}
+import { Education as IEducation } from '../../types';
+import { beautifyDate } from '../../utils/beautifyDate';
 
-function beautifyDate(dateString: string): string {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en', { month: 'long', year: 'numeric' });
-}
+type EducationProps = IEducation;
 
 const Education: FC<EducationProps> = ({ title, institutionName, period, location }) => {
     return (

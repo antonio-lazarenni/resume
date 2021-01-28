@@ -1,4 +1,6 @@
+import { GetStaticProps } from 'next';
 import Head from 'next/head';
+import { FC } from 'react';
 import { Container, Flex, Link, Text } from 'theme-ui';
 
 import ColorModeSwitcher from '../components/ColorModeSwitcher';
@@ -7,9 +9,14 @@ import Experience from '../components/Experience';
 import Person from '../components/Person';
 import Section from '../components/Section';
 import SectionTitle from '../components/SectionTitle';
+import { Author } from '../types';
 import { getAuthorById } from '../utils/graphcms';
 
-export default function Home({ author }): JSX.Element {
+interface HomeProps {
+    author: Author;
+}
+
+const Home: FC<HomeProps> = ({ author }) => {
     return (
         <>
             <Head>
@@ -85,9 +92,9 @@ export default function Home({ author }): JSX.Element {
             <footer></footer>
         </>
     );
-}
+};
 
-export async function getStaticProps({ preview = false }) {
+export const getStaticProps: GetStaticProps = async () => {
     try {
         const author = await getAuthorById('ckkfgjdfcl44209156lzxzls0');
 
@@ -95,4 +102,6 @@ export async function getStaticProps({ preview = false }) {
     } catch (error) {
         console.log(error);
     }
-}
+};
+
+export default Home;

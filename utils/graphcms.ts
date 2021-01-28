@@ -1,3 +1,5 @@
+import { Author } from '../types';
+
 async function fetchAPI(
     query: string,
     { variables, preview } = { variables: undefined, preview: undefined }
@@ -26,7 +28,7 @@ async function fetchAPI(
     return json.data;
 }
 
-export async function getAuthorById(id) {
+export async function getAuthorById(id: string): Promise<Author> {
     const data = await fetchAPI(
         `
       query AuthorById($id: ID!) {

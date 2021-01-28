@@ -1,32 +1,10 @@
 import { FC } from 'react';
 import { Box, Flex, Link, Text } from 'theme-ui';
 
-interface Content {
-    html: string;
-}
+import { Experience as IExperience } from '../../types';
+import { beautifyDate } from '../../utils/beautifyDate';
 
-interface ExperienceProps {
-    company: string;
-    title: string;
-    tags: string[];
-    stage: string;
-    slug: string;
-    period: [string, string];
-    location: string;
-    link: string;
-    id: string;
-    excerpt: string;
-    content: Content;
-    date: Date;
-    publishedAt: Date;
-    updatedAt: Date;
-    createdAt: Date;
-}
-
-function beautifyDate(dateString: string): string {
-    const date = new Date(dateString);
-    return date.toLocaleDateString('en', { month: 'long', year: 'numeric' });
-}
+type ExperienceProps = IExperience;
 
 const Experience: FC<ExperienceProps> = ({
     company,

@@ -4,19 +4,9 @@ import Image from 'next/image';
 import { FC } from 'react';
 import { Flex, Heading, jsx, Text } from 'theme-ui';
 
-interface Picture {
-    url: string;
-}
+import { Author } from '../../types';
 
-interface PersonProps {
-    title: string;
-    name: string;
-    biography: string;
-    email: string;
-    github: string;
-    linkedin: string;
-    picture: Picture;
-}
+type PersonProps = Author;
 
 const Person: FC<PersonProps> = ({ title, name, biography, picture }) => {
     return (
