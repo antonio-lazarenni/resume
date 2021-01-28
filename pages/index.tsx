@@ -27,19 +27,15 @@ export default function Home({ author, posts }) {
       <Container as="main" sx={{
         display: 'flex',
         flexDirection: 'column',
-        // gap: 5, // Enable it in the future
         px: [3, 3, 0]
       }}>
-        <Section sx={{
-          my: 5,
-        }}>
+        <Section>
           <Person {...author} />
         </Section>
         <Section sx={{
             display: 'flex',
             flexDirection: 'column-reverse',
             my: 5,
-            // gap: 5, // Enable it in the future
         }}>
           {posts.map((post) => <Experience key={post.slug} {...post} />)}
         </Section>

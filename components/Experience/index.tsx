@@ -47,11 +47,9 @@ const Experience: FC<ExperienceProps> = ({
     return (
         <Flex sx={{
             flexDirection: 'column',
-            // gap: 2,
             my: [5, 5],
         }}>
         <Flex sx={{
-            // gap: '1rem',
             my: 2,
             '& > *:not(:last-child)': {
                 marginRight: [0, 3],
@@ -67,7 +65,6 @@ const Experience: FC<ExperienceProps> = ({
             ><Text as="strong" variant="textStyles.strong">{link}</Text></Link>
         </Flex>
         {tags && <Flex sx={{
-            // gap: '.5rem',
             my: 2,
             '& > *:not(:last-child)': {
                 marginRight: [3, 3],

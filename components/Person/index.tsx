@@ -20,10 +20,10 @@ const Person: FC<PersonProps> = ({ title, name, biography, picture }) => {
     return (
         <Flex sx={{
             flexDirection: 'column',
-            gap: 4
         }}>
             <Flex sx={{
-                justifyContent: 'center'
+                justifyContent: 'center',
+                my: 4,
             }}>
                 <Flex sx={{
                     boxShadow: (theme) => `1rem 1rem ${theme.colors.text}`,
@@ -39,14 +39,14 @@ const Person: FC<PersonProps> = ({ title, name, biography, picture }) => {
             <Flex sx={{
                 flexDirection: ['column', 'row'],
                 justifyContent: 'center',
-                gap: 20,
+                my: 4,
             }}>
                 <Heading sx={{
                     textAlign: 'center',
                 }}>{name}</Heading>
                 <Heading as='h2' sx={{
                     textAlign: 'center',
-                }}>{title}</Heading>
+                }}>[{title}]</Heading>
             </Flex>
             <Text>{biography}</Text>
         </Flex>
