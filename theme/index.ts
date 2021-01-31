@@ -34,7 +34,8 @@ export default {
     },
     lineHeights: {
         body: 1.5,
-        heading: 1.25
+        heading: 1.25,
+        link: 2.25
     },
     textStyles: {
         heading: {
@@ -60,6 +61,12 @@ export default {
             fontSize: [4, 5],
             fontWeight: 'display',
             letterSpacing: '-0.03em'
+        },
+        link: {
+            variant: 'textStyles.strong',
+            lineHeight: 'link',
+            fontSize: [4, 4],
+            letterSpacing: '0.03em'
         }
     },
     layout: {

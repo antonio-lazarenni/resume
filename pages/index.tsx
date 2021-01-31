@@ -24,6 +24,7 @@ const Home: FC<HomeProps> = ({ author }) => {
                 {process.env.NODE_ENV === 'production' && (
                     <script async data-api="/_hive" src="/bee.js"></script>
                 )}
+                <meta name="Description" content={`${author.name} - Resume`}></meta>
             </Head>
             <header>
                 <Container
@@ -69,21 +70,22 @@ const Home: FC<HomeProps> = ({ author }) => {
                         sx={{
                             justifyContent: 'space-around',
                             flexDirection: ['column', 'row'],
-                            my: [5, 5]
+                            alignItems: ['center'],
+                            my: [4, 5]
                         }}>
-                        <Link href={`mailto:${author.email}`}>
-                            <Text as="strong" variant="textStyles.strong">
-                                {author.email}
-                            </Text>
-                        </Link>
                         <Link href={author.github}>
-                            <Text as="strong" variant="textStyles.strong">
+                            <Text as="strong" variant="textStyles.link">
                                 GitHub
                             </Text>
                         </Link>
                         <Link href={author.linkedin}>
-                            <Text as="strong" variant="textStyles.strong">
+                            <Text as="strong" variant="textStyles.link">
                                 LinkedIn
+                            </Text>
+                        </Link>
+                        <Link href={`mailto:${author.email}`}>
+                            <Text as="strong" variant="textStyles.link">
+                                {author.email}
                             </Text>
                         </Link>
                     </Flex>
