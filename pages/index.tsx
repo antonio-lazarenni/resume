@@ -21,7 +21,9 @@ const Home: FC<HomeProps> = ({ author }) => {
         <>
             <Head>
                 <title>{`${author.name}`}</title>
-                <script async data-api="/_hive" src="/bee.js"></script>
+                {process.env.NODE_ENV === 'production' && (
+                    <script async data-api="/_hive" src="/bee.js"></script>
+                )}
             </Head>
             <header>
                 <Container
